@@ -24,8 +24,14 @@ import com.example.wordsapp.databinding.ActivityDetailBinding
 
 class DetailActivity : AppCompatActivity() {
 
+    /**
+     * Provides global access to these variables from anywhere in the app
+     * via DetailActivity.<variable> without needing to create
+     * a DetailActivity instance.
+     */
     companion object {
         const val LETTER = "letter"
+        const val SEARCH_PREFIX = "https://www.google.com/search?q="
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
