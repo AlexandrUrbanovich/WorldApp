@@ -35,6 +35,7 @@ class WordListFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        // Retrieve and inflate the layout for this fragment
         _binding = FragmentWordListBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -44,11 +45,15 @@ class WordListFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = WordAdapter(activity?.intent?.extras?.getString(LETTER).toString(), requireContext())
 
+        // Adds a [DividerItemDecoration] between items
         recyclerView.addItemDecoration(
             DividerItemDecoration(context, DividerItemDecoration.VERTICAL)
         )
     }
 
+    /**
+     * Frees the binding object when the Fragment is destroyed.
+     */
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
