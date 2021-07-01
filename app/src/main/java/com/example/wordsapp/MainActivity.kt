@@ -19,11 +19,11 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import com.example.wordsapp.databinding.ActivityMainBinding
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.example.wordsapp.databinding.ActivityMainBinding
 
 /**
- * Main Activity and entry point for the app. Displays a RecyclerView of letters.
+ * Main Activity and entry point for the app.
  */
 class MainActivity : AppCompatActivity() {
 
@@ -35,10 +35,9 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         // Get the navigation host fragment from this Activity
-        val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         // Instantiate the navController using the NavHostFragment
         navController = navHostFragment.navController
         // Make sure actions in the ActionBar get propagated to the NavController

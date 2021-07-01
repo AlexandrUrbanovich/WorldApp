@@ -15,7 +15,6 @@
  */
 package com.example.wordsapp
 
-import android.content.Intent
 import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
@@ -53,8 +52,9 @@ class LetterAdapter :
         val layout = LayoutInflater
                 .from(parent.context)
                 .inflate(R.layout.item_view, parent, false)
+
         // Setup custom accessibility delegate to set the text read
-        layout.accessibilityDelegate = WordAdapter
+        layout.accessibilityDelegate = Accessibility
         return LetterViewHolder(layout)
     }
 
