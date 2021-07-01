@@ -68,7 +68,7 @@ class LetterAdapter :
         holder.button.setOnClickListener {
             val context = holder.view.context
             // Create an intent with a destination of DetailActivity
-            val intent = Intent(context, DetailActivity::class.java)
+            val intent = Intent(context, LetterListFragment::class.java)
             // Add the selected letter to the intent as extra data
             // The text of Buttons are [CharSequence], a list of characters,
             // so it must be explicitly converted into a [String].
